@@ -10,5 +10,9 @@
 
   <body>
     <%= yield %>
+    <div class='footer'>
+      <%= link_to 'Home ', home_path%>|<%= link_to ' Contact Us', contact_us_path%>|
+      <%= link_to ' Legal ', legal_path %>|<%= link_to ' Privacy Policy ', privacy_policy_path%>
+    </div>    
   </body>
 </html>
