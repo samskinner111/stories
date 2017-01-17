@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Story:</strong>
+  <%= @assessment.story %>
+</p>
+
+<p>
+  <strong>Duplicate:</strong>
+  <%= @assessment.duplicate %>
+</p>
+
+<p>
+  <strong>Importance:</strong>
+  <%= @assessment.importance %>
+</p>
+
+<p>
+  <strong>Valence:</strong>
+  <%= @assessment.valence %>
+</p>
+
+<p>
+  <strong>Match value:</strong>
+  <%= @assessment.match_value_id %>
+</p>
+
+<p>
+  <strong>Match strengh:</strong>
+  <%= @assessment.match_strengh %>
+</p>
+
+<p>
+  <strong>Value violation:</strong>
+  <%= @assessment.value_violation %>
+</p>
+
+<p>
+  <strong>Value violated:</strong>
+  <%= @assessment.value_violated_id %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @assessment.comments %>
+</p>
+
+<p>
+  <strong>Restrict comments:</strong>
+  <%= @assessment.restrict_comments %>
+</p>
+
+<%= link_to 'Edit', edit_assessment_path(@assessment) %> |
+<%= link_to 'Back', assessments_path %>

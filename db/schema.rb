@@ -10,10 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170116150742) do
+ActiveRecord::Schema.define(version: 20170116235803) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "assessments", force: :cascade do |t|
+    t.integer  "story_id"
+    t.boolean  "duplicate"
+    t.string   "importance"
+    t.string   "valence"
+    t.integer  "match_value_id"
+    t.string   "match_strengh"
+    t.boolean  "value_violation"
+    t.integer  "value_violated_id"
+    t.text     "comments"
+    t.boolean  "restrict_comments"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.index ["story_id"], name: "index_assessments_on_story_id", using: :btree
+  end
 
   create_table "stories", force: :cascade do |t|
     t.text     "description"
@@ -22,4 +38,5 @@ ActiveRecord::Schema.define(version: 20170116150742) do
     t.datetime "updated_at",  null: false
   end
 
+  add_foreign_key "assessments", "stories"
 end

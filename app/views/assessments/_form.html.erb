@@ -1,0 +1,67 @@
+<%= form_for(assessment) do |f| %>
+  <% if assessment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(assessment.errors.count, "error") %> prohibited this assessment from being saved:</h2>
+
+      <ul>
+      <% assessment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :story_id %>
+    <%= f.number_field :story_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :duplicate %>
+    <%= f.check_box :duplicate %>
+  </div>
+
+  <div class="field">
+    <%= f.label :importance %>
+    <%= f.text_field :importance %>
+  </div>
+
+  <div class="field">
+    <%= f.label :valence %>
+    <%= f.text_field :valence %>
+  </div>
+
+  <div class="field">
+    <%= f.label :match_value_id %>
+    <%= f.number_field :match_value_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :match_strengh %>
+    <%= f.text_field :match_strengh %>
+  </div>
+
+  <div class="field">
+    <%= f.label :value_violation %>
+    <%= f.check_box :value_violation %>
+  </div>
+
+  <div class="field">
+    <%= f.label :value_violated_id %>
+    <%= f.number_field :value_violated_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :comments %>
+    <%= f.text_area :comments %>
+  </div>
+
+  <div class="field">
+    <%= f.label :restrict_comments %>
+    <%= f.check_box :restrict_comments %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

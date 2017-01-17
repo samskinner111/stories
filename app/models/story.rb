@@ -1,7 +1,10 @@
 class Story < ApplicationRecord
-  validates_presence_of :description, :story_type
+  has_many :assessments, dependent: :destroy
+
+  validates :description, presence: true
+  validates :story_type, presence: true
 
   def self.story_types
-    return ['behavior', 'process', 'saying']
+    return %w[behavior process saying]
   end
 end

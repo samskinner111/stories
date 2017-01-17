@@ -2,7 +2,7 @@ require 'test_helper'
 
 class StoriesControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @story = stories(:one)
+    @story = stories(:two)
   end
 
   test "should get index" do

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  resources :story_points
+  resources :assessments
+  resources :stories
 
   get 'company_health' => 'pages#company_health'
   get 'contact_us' => 'pages#contact_us'
