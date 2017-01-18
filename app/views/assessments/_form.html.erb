@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :story_id %>
+    <span>Story Id</span><br>
     <%= f.number_field :story_id %>
   </div>
 
@@ -23,12 +23,12 @@
 
   <div class="field">
     <%= f.label :importance %>
-    <%= f.text_field :importance %>
+        <%= f.select(:importance, Assessment.importance.collect {|p| [p] }, {:include_blank => 'Please indicate the importance'}) %>
   </div>
 
   <div class="field">
     <%= f.label :valence %>
-    <%= f.text_field :valence %>
+    <%= f.select(:valence, Assessment.valence.collect {|p| [p] }, {:include_blank => 'Please indicate your feelings'}) %>
   </div>
 
   <div class="field">
@@ -37,8 +37,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :match_strengh %>
-    <%= f.text_field :match_strengh %>
+    <%= f.label :match_strength %>
+    <%= f.select(:match_strength, Assessment.match_strength.collect {|p| [p] }, {:include_blank => 'Please indicate degree of matching'}) %>
   </div>
 
   <div class="field">

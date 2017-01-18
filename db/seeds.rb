@@ -14,3 +14,12 @@
     { description: 'Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. ',
       story_type: 'saying'}
   ])
+
+  Assessment.create([{story_id: 1, duplicate: true, importance: 'neutral', valence: 'positive',
+                      match_value_id: 1, match_strength: 'matches', value_violation: false,
+                      value_violated_id: 2, comments: 'take one', restrict_comments: true}, 
+                     {story_id: 3, duplicate: false, importance: 'low importance', valence: 'negative',
+                      match_value_id: 1, match_strength: 'strongly matches', value_violation: true,
+                      value_violated_id: 2, comments: 'take two', restrict_comments: false}])
+
+

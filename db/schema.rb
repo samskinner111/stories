@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170116235803) do
+ActiveRecord::Schema.define(version: 20170118183810) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20170116235803) do
     t.string   "importance"
     t.string   "valence"
     t.integer  "match_value_id"
-    t.string   "match_strengh"
+    t.string   "match_strength"
     t.boolean  "value_violation"
     t.integer  "value_violated_id"
     t.text     "comments"

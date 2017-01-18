@@ -5,12 +5,12 @@
 <table>
   <thead>
     <tr>
-      <th>Story</th>
+      <th>Story Type</th>
       <th>Duplicate</th>
       <th>Importance</th>
       <th>Valence</th>
       <th>Match value</th>
-      <th>Match strengh</th>
+      <th>Match strength</th>
       <th>Value violation</th>
       <th>Value violated</th>
       <th>Comments</th>
@@ -22,12 +22,12 @@
   <tbody>
     <% @assessments.each do |assessment| %>
       <tr>
-        <td><%= assessment.story %></td>
+        <td><%= assessment.story.story_type %></td>
         <td><%= assessment.duplicate %></td>
         <td><%= assessment.importance %></td>
         <td><%= assessment.valence %></td>
         <td><%= assessment.match_value_id %></td>
-        <td><%= assessment.match_strengh %></td>
+        <td><%= assessment.match_strength %></td>
         <td><%= assessment.value_violation %></td>
         <td><%= assessment.value_violated_id %></td>
         <td><%= assessment.comments %></td>

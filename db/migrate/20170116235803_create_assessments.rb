@@ -6,7 +6,7 @@ class CreateAssessments < ActiveRecord::Migration[5.0]
       t.string :importance
       t.string :valence
       t.integer :match_value_id
-      t.string :match_strengh
+      t.string :match_strength
       t.boolean :value_violation
       t.integer :value_violated_id
       t.text :comments
